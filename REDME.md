@@ -33,3 +33,7 @@
    - That uses Radomness t ogenerate uniques NFT
  3. SVG NFT (Hosted 100% on chain)
   - uses price feeds to be dynamic
+
+
+  # How RandomIpfsNft works
+  
