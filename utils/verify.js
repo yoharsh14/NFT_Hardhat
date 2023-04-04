@@ -13,6 +13,6 @@ async function verify(contractAddress, args) {
             console.log("Alreadyy Verified!!!!!");
         else console.log(e);
     }
-    log("-------------------")
+    console.log("-------------------")
 }
 module.exports = { verify };

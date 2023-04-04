@@ -1,9 +1,13 @@
 # What are we going to do
-1. Basic NFT ✅
-2. Random IPFS NFT
-3. Dynamic SVG NFT
-
-
+1. Basic NFT ✅ address: 0xc5F7605579BF5F2C7d7eCE1dE54803Dd6cad6e65
+2. Random IPFS NFT ✅ address: 0xdf204af5928A72716e05c6fc5bADC46aD250dE43
+- Pros: Cheap
+- const: Someone needs to pin our data
+3. Dynamic SVG NFT ✅ address 0x3F9aF05a63C180056ec60783032C0D5De7154eCd
+-Pros: the data is on chain!
+- cons: Much more expensive!
+If price of ETH is above X --> Happy Face
+If its' below --> frawn face
 # What is NTF's
 - NFT's also known as ERC721 standard
 - NFT means Non-Fungible Tokens, that means never two bill/assets/digital objects have same value, like charlizard != pikachu
@@ -36,4 +40,18 @@
 
 
   # How RandomIpfsNft works
-  
+  ## Variables used
+    ### Chainlink VRF Variables
+    VRFCoordinatorV2Interface private immutable i_vrfCoordinator;
+    uint64 private immutable i_subscriptionId;
+    bytes32 private immutable i_gasLane;
+    uint32 private immutable i_callbackGasLimit;
+    uint16 private constant REQUEST_CONFIRMATIONS = 3;
+    uint32 private constant NUM_WORDS = 1;
+    ### VRF Helper
+    - mapping(uint256 => address) public s_requestIdToSender;
+    ### NFT Variable
+    uint256 public s_tokenCounter;
+    uint256 internal constant MAX_CHANCE_VALUE = 100;
+    string[] internal s_dogTokenUris;
+    uint256 internal immutable i_mintFee;
